@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 3 - Multiplication and Division</title>
+    <script>
+        function calculate(operation) {
+            let num1 = parseFloat(document.getElementById("num1").value);
+            let num2 = parseFloat(document.getElementById("num2").value);
+            let result;
+            if (operation === "multiply") {
+                result = num1 * num2;
+            } else if (operation === "divide") {
+                result = num2 !== 0 ? num1 / num2 : "Cannot divide by zero";
+            }
+            document.getElementById("result").innerText = `The Result Is: ${result}`;
+        }
+    </script>
+</head>
+<body>
+<h2>Task 3 - Multiplication and Division</h2>
+1st Number: <input type="number" id="num1"><br>
+2nd Number: <input type="number" id="num2"><br>
+<button onclick="calculate('multiply')">Multiply</button>
+<button onclick="calculate('divide')">Divide</button>
+<p id="result"></p>
+</body>
+</html>

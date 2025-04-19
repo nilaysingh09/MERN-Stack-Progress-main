@@ -1,0 +1,84 @@
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: linear-gradient(to right, #7a7a7a, #000000);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Menu Container */
+.menu-container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 12px;
+    border: 2px solid #c5c5c5; /* Combines width, style, and color */
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 80vw;
+}
+
+/* Individual Menu Cards */
+.menu {
+    background: rgba(0, 0, 0, 0.85);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(198, 198, 198, 0.1);
+    width: 280px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+/* Hover Effect */
+.menu:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Menu Heading */
+.menu h2 {
+    color: #007bff;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+/* List Styling */
+.menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* List Items */
+.menu li {
+    margin: 12px 0;
+    font-size: 16px;
+    font-weight: 500;
+    color: #d1d1d1;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover Effect on List */
+.menu li:hover {
+    color: #007bff;
+    transform: scale(1.05);
+}
+
+/* Links */
+.menu ul a {
+    text-decoration: none;
+    display: block;
+    padding: 8px 0;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+/* Hover Effect on Links */
+.menu ul a:hover {
+    background: rgba(0, 123, 255, 0.1);
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 4 - Show Date and Time</title>
+    <script>
+        function showDate() {
+            const now = new Date();
+            const day = now.getDate();
+            const month = now.toLocaleString('default', { month: 'long' });
+            const year = now.getFullYear();
+
+            const formattedDate = `${day}/${month}/${year}`;
+
+            document.getElementById('date').textContent = formattedDate;
+        }
+
+        function showTime() {
+            const now = new Date();
+            const formattedTime = now.toString();
+
+            document.getElementById('time').textContent = formattedTime;
+        }
+    </script>
+</head>
+<body>
+<h2>Task 4 - Date and Time</h2>
+<button onclick="showDate()">show date</button>
+<p id="date"></p>
+<button onclick="showTime()">show Time</button>
+<p id="time"></p>
+</body>
+</html>

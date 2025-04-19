@@ -1,0 +1,29 @@
+.container {
+    padding: 4px;
+    display: flex;
+    height: 90vh; /* Use viewport height to center vertically */
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+table {
+    width: 98%;
+    border-collapse: collapse;
+    margin: 20px;
+    font-family: Arial, sans-serif;
+}
+
+th, td {
+    border: 2px solid white;
+    padding: 7px 20px;
+    text-align: left;
+    background-color: #65ede7;
+    color: black;
+}
+
+th {
+    background-color: #65ede7;
+    color: black;
+    font-weight: bold;
+}

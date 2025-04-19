@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #f9e8d0 0%, #f6b6c7 100%);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .form-container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            width: 600px;
+        }
+
+        .form-title {
+            text-align: center;
+            color: #0000CC;
+            font-size: 24px;
+            margin-bottom: 25px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            display: flex;
+        }
+
+        .form-label {
+            width: 150px;
+            text-align: right;
+            padding-right: 15px;
+            line-height: 34px;
+            font-weight: bold;
+        }
+
+        .form-input {
+            flex: 1;
+            display: flex;
+            align-items: center;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="number"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            height: 80px;
+            resize: vertical;
+        }
+
+        .validation-message {
+            color: #ff0000;
+            margin-left: 10px;
+            font-size: 14px;
+            display: none;
+        }
+
+        .invalid .validation-message {
+            display: block;
+        }
+
+        .invalid input,
+        .invalid textarea,
+        .invalid select {
+            border: 1px solid #ff0000;
+        }
+
+        .checkbox-group {
+            display: flex;
+            gap: 15px;
+        }
+
+        .radio-group {
+            display: flex;
+            gap: 20px;
+        }
+
+        .declaration-group {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .button-group {
+            text-align: center;
+            margin-top: 25px;
+        }
+
+        .register-button {
+            background-color: #ff0000;
+            color: white;
+            padding: 10px 30px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .login-link {
+            margin-top: 15px;
+            text-align: center;
+        }
+
+        .login-link a {
+            color: #0000CC;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+<div class="form-container">
+    <div class="form-title">Registration form</div>
+
+    <form id="registrationForm">
+        <div class="form-group">
+            <div class="form-label">First Name</div>
+            <div class="form-input">
+                <input type="text" id="firstName" name="firstName" required>
+                <div class="validation-message">POOR</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="form-label">Last Name</div>
+            <div class="form-input">
+                <input type="text" id="lastName" name="lastName" required>
+                <div class="validation-message">POOR</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="form-label">Email</div>
+            <div class="form-input">
+                <input type="email" id="email" name="email" required>
+                <div class="validation-message">POOR</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="form-label">Password</div>
+            <div class="form-input">
+                <input type="password" id="password" name="password" required>
+                <div class="validation-message">POOR</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="form-label">Re-enter Password</div>
+            <div class="form-input">
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
+                <div class="validation-message">POOR OR MISMATCH</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="form-label">Gender</div>
+            <div class="form-input radio-group">
+                <div>
+                    <input type="radio" id="male" name="gender" value="male" checked>
+                    <label for="male">Male</label>
+                </div>
+                <div>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="form-label">Age</div>
+            <div class="form-input">
+                <input type="number" id="age" name="age" min="1" max="120" required>
+                <div class="validation-message">POOR</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="form-label">Phone Number</div>
+            <div class="form-input">
+                <input type="text" id="phoneNumber" name="phoneNumber" required>
+                <div class="validation-message">POOR</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="form-label">Address</div>
+            <div class="form-input">
+                <textarea id="address" name="address" required></textarea>
+                <div class="validation-message">POOR</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="form-label">State</div>
+            <div class="form-input">
+                <input type="text" id="state" name="state" required>
+                <div class="validation-message">POOR</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="form-label">Country</div>
+            <div class="form-input">
+                <select id="country" name="country" required>
+                    <option value="">Choose your country</option>
+                    <option value="India">India</option>
+                    <option value="USA">USA</option>
+                    <option value="UK">UK</option>
+                    <option value="Canada">Canada</option>
+                    <option value="Australia">Australia</option>
+                    <option value="Others">Others</option>
+                </select>
+                <div class="validation-message">POOR</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="form-label">Languages known</div>
+            <div class="form-input checkbox-group">
+                <div>
+                    <input type="checkbox" id="english" name="languages" value="English">
+                    <label for="english">English</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="kannada" name="languages" value="Kannada">
+                    <label for="kannada">Kannada</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="hindi" name="languages" value="Hindi">
+                    <label for="hindi">Hindi</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="telugu" name="languages" value="Telugu">
+                    <label for="telugu">Telugu</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="declaration-group">
+            <input type="checkbox" id="declaration" name="declaration" required checked>
+            <label for="declaration">Hereby I declare all the given details are true</label>
+        </div>
+
+        <div class="login-link">
+            Log in to <a href="https://ethnus.com">Ethnus</a> website
+        </div>
+
+        <div class="button-group">
+            <button type="submit" class="register-button">REGISTER</button>
+        </div>
+    </form>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const form = document.getElementById('registrationForm');
+        const password = document.getElementById('password');
+        const confirmPassword = document.getElementById('confirmPassword');
+        const email = document.getElementById('email');
+        const phoneNumber = document.getElementById('phoneNumber');
+        function validateField(field, condition, message) {
+            const formGroup = field.closest('.form-group');
+            const validationMessage = formGroup.querySelector('.validation-message');
+            if (!condition) {
+                formGroup.classList.add('invalid');
+                if (message) {
+                    validationMessage.textContent = message;
+                }
+                return false;
+            } else {
+                formGroup.classList.remove('invalid');
+                return true;
+            }
+        }
+        confirmPassword.addEventListener('input', function() {
+            validateField(confirmPassword, confirmPassword.value === password.value, 'MISMATCH');
+        });
+        email.addEventListener('input', function() {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            validateField(email, emailRegex.test(email.value));
+        });
+        phoneNumber.addEventListener('input', function() {
+            const phoneRegex = /^\d{10}$/;
+            validateField(phoneNumber, phoneRegex.test(phoneNumber.value));
+        });
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            let isValid = true;
+            const requiredFields = form.querySelectorAll('[required]');
+            requiredFields.forEach(field => {
+                if (field.type === 'checkbox') {
+                    if (!validateField(field, field.checked)) {
+                        isValid = false;
+                    }
+                } else {
+                    if (!validateField(field, field.value.trim() !== '')) {
+                        isValid = false;
+                    }
+                }
+            });
+            if (!validateField(confirmPassword, confirmPassword.value === password.value, 'MISMATCH')) {
+                isValid = false;
+            }
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!validateField(email, emailRegex.test(email.value))) {
+                isValid = false;
+            }
+            const phoneRegex = /^\d{10}$/;
+            if (!validateField(phoneNumber, phoneRegex.test(phoneNumber.value))) {
+                isValid = false;
+            }
+            if (isValid) {
+                const formData = {
+                    firstName: document.getElementById('firstName').value,
+                    lastName: document.getElementById('lastName').value,
+                    email: email.value,
+                    gender: document.querySelector('input[name="gender"]:checked').value,
+                    age: document.getElementById('age').value,
+                    phoneNumber: phoneNumber.value,
+                    address: document.getElementById('address').value,
+                    state: document.getElementById('state').value,
+                    country: document.getElementById('country').value,
+                    languages: Array.from(document.querySelectorAll('input[name="languages"]:checked'))
+                        .map(checkbox => checkbox.value)
+                };
+                let users = JSON.parse(localStorage.getItem('users')) || [];
+                users.push(formData);
+                localStorage.setItem('users', JSON.stringify(users));
+                alert('Registration successful!');
+                form.reset();
+            }
+        });
+    });
+</script>
+</body>
+</html>

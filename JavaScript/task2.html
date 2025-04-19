@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2 - Alphabetical Order</title>
+    <link rel="stylesheet" href="../style.css">
+    <script>
+        function sortString() {
+            let str = prompt("Enter a string:");
+            let sorted = str.split('').sort().join('');
+            document.getElementById("result").innerText = `Sorted String: ${sorted}`;
+        }
+    </script>
+</head>
+<body>
+<h2 style="color: darkorchid">Task 2 - Sort String Alphabetically</h2>
+<button style="color: peachpuff; width: 10vw; height: 10vh; background: black" onclick="sortString()">Sort String Alphabetically (Click me)</button>
+<p id="result"></p>
+</body>
+</html>

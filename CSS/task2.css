@@ -1,0 +1,58 @@
+/* Vertical Navigation Bar */
+.vertical-nav {
+    width: 200px;
+    border: 1px solid black;
+}
+.vertical-nav a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 18px;
+}
+.vertical-nav .home {
+    background-color: orange;
+    color: white;
+    font-weight: bold;
+}
+.vertical-nav .links {
+    background-color: lightblue;
+    color: blue;
+}
+
+/* Horizontal Navigation Bar */
+.horizontal-nav {
+    display: flex;
+    border: 1px solid black;
+    width: 400px;
+}
+.horizontal-nav a {
+    flex: 1;
+    padding: 10px;
+    text-decoration: none;
+    text-align: center;
+    border-right: 1px solid black;
+    font-size: 18px;
+}
+.horizontal-nav .home {
+    background-color: gray;
+    color: white;
+}
+.horizontal-nav .links {
+    color: blue;
+}
+.cont1{
+    border:1px solid black;
+    padding:2px;
+    width:240px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.cont2{
+    border:1px solid black;
+    padding:2px;
+    width:440px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}

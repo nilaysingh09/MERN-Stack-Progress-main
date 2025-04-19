@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Train Animation</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial;
+            margin-top: 50px;
+        }
+
+        #train {
+            position: relative;
+            left: 0px;
+            transition: transform 0.1s linear;
+        }
+
+        h3 {
+            color: navy;
+        }
+    </style>
+</head>
+<body>
+
+<img id="train" src="train.png" alt="Train" width="300">
+
+<h3>Click the following buttons to handle animation</h3>
+
+<button onclick="startTrain()">Start</button>
+<button onclick="stopTrain()">Stop</button>
+
+<script>
+    let train = document.getElementById("train");
+    let position = 0;
+    let animation;
+
+    function moveTrain() {
+        position += 2;
+        train.style.left = position + "px";
+        if (position > window.innerWidth) {
+            position = -300; // reset position when train goes off screen
+        }
+    }
+
+    function startTrain() {
+        if (!animation) {
+            animation = setInterval(moveTrain, 20);
+        }
+    }
+
+    function stopTrain() {
+        clearInterval(animation);
+        animation = null;
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Instagram Login Clone</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-box {
+            background: white;
+            padding: 40px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 300px;
+            text-align: center;
+            border-radius: 8px;
+        }
+
+        .login-box h2 {
+            font-family: 'Brush Script MT', cursive;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .login-btn {
+            width: 100%;
+            background-color: #3897f0;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            font-weight: bold;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        .options {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            font-size: 13px;
+        }
+
+        .options a {
+            text-decoration: none;
+            color: #3897f0;
+        }
+
+        .signup {
+            margin-top: 20px;
+            font-size: 13px;
+        }
+
+        .signup a {
+            text-decoration: none;
+            color: #3897f0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="login-box">
+    <h2>Instagram</h2>
+
+    <input type="text" placeholder="Username">
+    <input type="password" placeholder="Password">
+
+    <button class="login-btn">Log in</button>
+
+    <div class="options">
+        <label><input type="checkbox"> Remember me</label>
+        <a href="#">Forgot Password?</a>
+    </div>
+
+    <div class="signup">
+        Don't have an account? <a href="#">Sign up here.</a>
+    </div>
+</div>
+
+</body>
+</html>

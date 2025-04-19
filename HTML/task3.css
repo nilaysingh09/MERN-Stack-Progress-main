@@ -1,0 +1,23 @@
+.link-container {
+    border: 1px solid #000;
+    background-color: #f0f0f0; /* Light gray background as in the image */
+    padding: 10px;
+    margin: 20px;
+    width: 500px; /* Adjust width to match the image */
+    text-align: center;
+}
+.link-text {
+    margin-bottom: 5px;
+    font-family: Arial, sans-serif;
+}
+.links {
+    display: inline-block;
+}
+.links a {
+    color: blue;
+    text-decoration: none;
+    margin: 0 5px;
+}
+.links a:hover {
+    text-decoration: underline;
+}
